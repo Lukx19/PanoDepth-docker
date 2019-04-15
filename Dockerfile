@@ -19,6 +19,8 @@ RUN apt-get update && \
     git \
     build-essential \
     software-properties-common \
+    libeigen3-dev \
+    libproj-dev \
     libstdc++6 && \
     rm -rf /var/lib/apt/lists/*
 

@@ -1,0 +1,1 @@
+docker build . -t lukx19/panodepth:latest
