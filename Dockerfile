@@ -9,6 +9,7 @@ RUN apt-get update && \
     wget \
     curl \
     zip \
+    unzip \
     bzip2 \
     tmux \
     screen \
