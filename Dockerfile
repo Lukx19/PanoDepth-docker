@@ -18,6 +18,7 @@ RUN apt-get update && \
     less \
     nano \
     git \
+    pigz \
     build-essential \
     software-properties-common \
     libeigen3-dev \
