@@ -60,6 +60,8 @@ dependencies:
   - opencv
   - visdom
   - scipy
+  - grahviz
+  - python-graphviz
   - matplotlib
   - tqdm=4.31.1=py37_1
   - pcl=1.9.1=h482114b_1001
