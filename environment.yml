@@ -4,6 +4,7 @@ channels:
   - conda-forge
   - defaults
   - open3d-admin
+  - plotly
 dependencies:
   - blas=1.0=mkl
   - ca-certificates=2018.11.29=ha4d7672_0
@@ -60,7 +61,9 @@ dependencies:
   - opencv
   - visdom
   - scipy
-  - grahviz
+  - plotly
+  - plotly-orca
+  - psutil
   - python-graphviz
   - matplotlib
   - tqdm=4.31.1=py37_1

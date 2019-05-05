@@ -47,6 +47,23 @@ COPY ./environment.yml /tmp/environment.yml
 RUN . /root/.bashrc && \
     conda env create -f /tmp/environment.yml
 
+# Taking care of Plotly rendering to file
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    libgtk2.0-0 \
+    libxtst6 \
+    libxss1 \
+    libgconf-2-4 \
+    libnss3-dev \
+    xvfb \
+    libasound-dev \
+    libx11-xcb-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mv /opt/conda/envs/core/bin/orca /opt/conda/envs/core/bin/orca_orig
+COPY orca /opt/conda/envs/core/bin/orca
+RUN chmod +x /opt/conda/envs/core/bin/orca
+
 # Pull the environment name out of the environment.yml
 RUN echo "conda activate $(head -1 /tmp/environment.yml | cut -d' ' -f2)" >> /root/.bashrc
 ENV PATH /opt/conda/envs/$(head -1 /tmp/environment.yml | cut -d' ' -f2)/bin:$PATH

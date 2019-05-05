@@ -2,21 +2,14 @@
 *           text eol=lf
 # Source files
 # ============
-*.pxd		 text eol=lf
-*.py 		 text eol=lf
-*.py3 		 text eol=lf
-*.pyw 		 text eol=lf
-*.pyx  		 text eol=lf
-*.txt        text eol=lf
-*.csv        text eol=lf
+*.bash		 text eol=lf
+*.yml        text eol=lf
+*.md        text eol=lf
+
 # Binary files
 # ============
-*.db		binary
-*.p 		binary
-*.pkl 		binary
-*.pyc 		binary
-*.pyd		binary
-*.pyo 		binary
+# *.db		binary
+
 
 # Note: .db, .p, and .pkl files are associated
 # with the python modules ``pickle``, ``dbm.*``,
